@@ -18,23 +18,4 @@ MongoClient.connect(connectionURL, {useNewUrlParser : true}, (error, client) =>{
         }
         console.log(tasks);
     });
-    db.collection('users').updateOne({
-        _id : new ObjectID('5fb8de6654862c22b8298c46')
-    },
-    {
-        $set : [{
-            name : 'GrizzlySinOfSloth',
-            a : 'Harlequin'
-        },
-        {
-            name : 'FoxSinOfGreed',
-            a : 'Ban'
-        }]
-    }).then((result)=>{
-        console.log('Successful!',result);
-    }).catch((error)=>{
-        console.log('Failed!', error);
-    })
-    
-
 })
