@@ -10,6 +10,10 @@ taskSchema = new mongoose.Schema({
         type : Boolean,
         default : false
     },
+    Deadline : {
+        type : Date,
+        required : true,
+    },
     Creator : {
         type : mongoose.Schema.Types.ObjectId,
         required : true,
